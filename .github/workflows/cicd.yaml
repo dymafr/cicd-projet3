@@ -64,6 +64,7 @@ jobs:
 
       - name: installer les dépendances
         run: |
+          cd client
           npm ci --prefer-offline
 
       - name: vérifie les vulnérabilités
