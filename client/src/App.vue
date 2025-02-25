@@ -20,7 +20,7 @@ async function logout() {
 </template>
 
 <style lang="scss">
-@import './assets/base.scss';
+@use './assets/base.scss';
 
 .app-container {
   min-height: 100vh;
