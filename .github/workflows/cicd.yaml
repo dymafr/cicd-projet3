@@ -102,7 +102,7 @@ jobs:
           npm run build
 
       - name: archiver les artefacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: frontend-dist
           path: client/dist/
