@@ -133,7 +133,7 @@ jobs:
           npm run build:e2e
 
       - name: archiver les artefacts
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: frontend-dist-e2e
           path: client/dist/
@@ -156,7 +156,7 @@ jobs:
           cache-dependency-path: server/package-lock.json
 
       - name: récupérer l'artéfact du frontend pour les tests e2e
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: frontend-dist-e2e
           path: ./client/dist
@@ -195,7 +195,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: télécharger l'artéfact du frontend
-        uses: actions/download-artifact@v3
+        uses: actions/download-artifact@v4
         with:
           name: frontend-dist
           path: ./dist
