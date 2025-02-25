@@ -1,8 +1,8 @@
-import type { User, UserForm } from '../interfaces/index';
+import type { User } from '../interfaces/index';
 
 const BASE_URL = '/api/user';
 
-export async function createUser(userForm: UserForm) {
+export async function createUser(userForm: Partial<User>) {
   const response = await fetch(BASE_URL, {
     method: 'POST',
     body: JSON.stringify(userForm),

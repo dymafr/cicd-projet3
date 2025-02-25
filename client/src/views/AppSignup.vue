@@ -2,7 +2,7 @@
 import { z } from 'zod';
 import { toTypedSchema } from '@vee-validate/zod';
 import { useField, useForm } from 'vee-validate';
-import type { UserForm } from '@/shared/interfaces';
+import type { User } from '@/shared/interfaces';
 import { createUser } from '@/shared/services/user.service';
 import { useRouter } from 'vue-router';
 
@@ -24,7 +24,7 @@ const { handleSubmit } = useForm({
   validationSchema
 });
 
-const submit = handleSubmit(async (formValue: UserForm) => {
+const submit = handleSubmit(async (formValue: Partial<User>) => {
   try {
     await createUser(formValue);
     router.push('/connexion');
